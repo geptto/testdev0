@@ -15,3 +15,4 @@ sudo mv /etc/sysctl.conf.old /etc/sysctl.conf
 sudo mv /etc/iptables.ipv4.nat.old /etc/iptables.ipv4.nat
 
 sudo apt-get purge isc-dhcp-server hostapd || true
+sudo apt-get autoremove || true
