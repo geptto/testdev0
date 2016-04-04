@@ -9,6 +9,9 @@ testdev0
 EOF
 sudo chmod 644 /etc/hostname
 
+sudo cp /etc/hosts /etc/hosts.old
+sudo sed -i: 's/^raspberrypi/testdev0/g' /etc/hosts
+
 #Set persistent names to the wireless cards
 cat <<EOF | sudo tee /etc/udev/rules.d/10-wifi.rules > /dev/null
 SUBSYSTEM=="net", ATTRS{idVendor}=="148f", ATTRS{idProduct}=="5370", NAME="wifi0"
