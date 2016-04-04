@@ -1,7 +1,8 @@
 #!/bin/bash -e
 
 #Revert the hostname setup
-sudo mv /etc/hostname.bak /etc/hostname
+sudo mv /etc/hostname.old /etc/hostname
+sudo mv /etc/hosts.old /etc/hosts
 
 #Revert persistent names to the wireless cards
 sudo rm /etc/udev/rules.d/10-wifi.rules
