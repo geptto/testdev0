@@ -27,6 +27,14 @@ update_config=1
 network={
         ssid="your network ssid"
         psk="your network password"
+        priority=1
+}
+
+network={
+        ssid="your network ssid"
+        psk="your network password"
+        scan_ssid=1
+        priority=2
 }
 EOF
 sudo chmod 600 /etc/wpa_supplicant/wpa_supplicant.conf
